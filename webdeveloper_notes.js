@@ -148,3 +148,67 @@ const filterArray = array.filter(num => num > 5);
 const reduceArray =array.reduce((accumulator, num) => {
 	return accumulator + num;
 })
+
+////ADVANCED OBJECT CONTENT////
+//reference type
+var object1 = {value :10};
+var object2= object1;
+var object3 = { value: 10 };
+
+object1 === object2 (true)
+object1 === object3 (false)
+
+/*
+NOTES
+
+object2 is referencing object1 therefore the value is always equal to object 1 when it changes. 
+However, object 3 eventhough it is set as a same value, it is known as different object. 
+evertime you create an array, it is different data structure.(ex. different object boxes)
+*/
+
+//context vs. scope 
+function () {
+	let a = 4; 
+	//everything inside the {} is called scope.
+}
+
+"this"
+const object4 = {
+	a: function() {
+		console.log(this);
+	}
+}
+
+//object4.a() => {a: f}
+
+//instatiation
+//make a copy of an object and reuse the code / limiting repeted code 
+//capitalize "class"
+class Player {
+	constructor(name, type) {
+		this.name = name;
+		this.type = type;
+	}
+	introduce() {
+		console.log(`Hi I am ${this.name}, I'm a ${this.type}`)
+	}
+}
+
+class Wizard extends Player {
+	constructor(name, type) {
+		super(name, type)
+	}
+	play() {
+		console.log (`WEEEEEEEEE I'm a ${this.type}`);
+	}
+}
+
+const wizard1 = new Wizard('Shelly', 'Healer');
+const wizard2 = new Wizard('Shawn', 'Dark Magic');
+//every time new player is created, the constructor is run.
+
+
+
+
+
+
