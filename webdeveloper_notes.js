@@ -338,8 +338,69 @@ Object.entries(obj).map(value=> {
 })
 
 
+//ADVANCED LOOPS
 
-Async Await 
+const basket = ['apple', 'oranges', 'grapes'];
+const detailedBasket = {
+	apples:5, 
+	oranges: 10, 
+	grapes: 10000
+}
+
+//1
+for (let i = 0; i < basket.length; i++){
+	console.log(basket[i]);
+}
+
+//2
+basket.forEach(items=>{
+	console.log(itme);
+})
+
+//3 for of (new feature of javascript)
+//Iterating - able to go 1 by 1 and look at the items (arrays, strings)
+for (item of basket) {
+	console.log(item);
+}
+
+for (item of 'basket') {
+	console.log(item);
+} 
+
+for ("whatever variable name" of "array name"){
+	console.log("variable name");
+}
+//4 for in - works with the object
+//loop over and look over object properties (not number)
+//enumerating - objects
+for(item in detailedBasket) {
+	console.log(item)
+}
+
+for(item in basket){
+	console.log(item);
+}
+=> 0 1 2 
+
+//in for in loops for the arrays,
+
+basket = {
+	0: 'apples',
+	1: 'oranges',
+	2: 'grapes'
+}
+
+
+//DEBUGGING
+const flattened = [[0,1], [2,3], [4,5]].reduce(
+	(a,b) => a.concat(b), []);
+   
+
+
+
+
+
+
 
 
 
