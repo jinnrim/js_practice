@@ -212,3 +212,26 @@ const wizard2 = new Wizard('Shawn', 'Dark Magic');
 //PASS BY REFERENCE VS. PASS BY VALUE
 
 
+//pass by value
+var a = 5;
+var b = a;
+
+b++;
+
+a= 5, b= 6
+// the value of a does not change even though b has been added. 
+
+
+//reference
+objects, array change in value because they share same object
+
+var c= [1,2,3,4,5];
+var d = c;
+
+d.push(123048)
+console.log(d) = [1,2,3,4,5,123048]
+console.log(c) = [1,2,3,4,5,123048]
+
+//if you dont want to change the values in array C then you can concat c do empty d array.
+
+
